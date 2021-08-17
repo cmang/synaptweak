@@ -1,4 +1,5 @@
 Synaptweak
+
 aka My Synaptics Touchpad Config App for Linux
 
 DESCRIPTION
@@ -19,6 +20,10 @@ This also uses "xinput" and "synclient." You should have xinput already,
 but you might need to install "synclient" - check your repos
 
 LICENSE
+
 BSD 3-Clause - see license.txt 
 
 Copyright 2021 Sam Foster. All rights reserved.
+
+https://user-images.githubusercontent.com/14346288/129721907-839184e0-ea1c-4a9a-b689-83edb68e48e0.png
+

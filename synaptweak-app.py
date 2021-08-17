@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
-# Synaptweak
-# aka My Synaptics Touchpad Config App
+#
+# Synaptweak by Indyjoenz
+# aka My Synaptics Touchpad Config App for Linux
+#
 # Lets me tweak and play with the pressure sensitivity settings on my
 # laptop's Synaptics Trackpad, to try to find the sweet spot to avoid
-# triggering accidental clicks.
+# triggering accidental clicks. Also changes some other settings in
+# the driver.
 #
-# Todo: Have a test click area
-# Save settings profiles (json?)
+# This is configured for my hardware. I make NO guarantee that this
+# will work with your machine.
+# 
+# This uses "xinput" and "synclient." You should have xinput,
+# but you might need to install "synclient" - check your repos
 #
-# Setting sensitivity settings:
-# xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Finger" 25 30 50
+# LICENSE - see license.txt
 #
-# Synaptics Capabilities (342):	1, 0, 0, 1, 1, 1, 1
-# from man page: https://linux.die.net/man/4/synaptics
-# Synaptics Capabilities
-# This read-only property expresses the physical capability of the touchpad, most notably whether the touchpad hardware supports multi-finger tapping and scrolling. 
-# 8 bit (BOOL), 7 values (read-only), has left button, has middle button, has right button, two-finger detection, three-finger detection, pressure detection, and finger/palm width detection.
-#
-
 
 from synaptweak_ui import Ui_Form
 
@@ -106,11 +104,11 @@ class SynapticsConfigWindow(qtw.QWidget):
     def updateUIFromSynConfig(self):
         print("Checking for PalmDetect.")
         if self.synConfig['PalmDetect'] == '1':
-            print("PalmDetect enabled!")
+            print("PalmDetect enabled")
             # turn on palmDetectCheckBox
             self.ui.palmDetectCheckBox.setChecked(True)
         elif self.synConfig['PalmDetect'] == '0':
-            print("PalmDetect disabled!")
+            print("PalmDetect disabled")
             self.ui.palmDetectCheckBox.setChecked(False)
         if self.synConfig['TapAndDragGesture'] == '1':
             print("Tap And Drag enabled")
