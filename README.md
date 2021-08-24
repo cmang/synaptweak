@@ -1,8 +1,8 @@
-Synaptweak
+# Synaptweak
 
 aka My Synaptics Touchpad Config App for Linux
 
-DESCRIPTION
+## Description
 
 This program lets me tweak and play with the pressure sensitivity 
 settings on my laptop's Synaptics Trackpad, to try to find the sweet
@@ -15,14 +15,14 @@ will work with your machine.
 
 ![Screenshot](https://user-images.githubusercontent.com/14346288/129721907-839184e0-ea1c-4a9a-b689-83edb68e48e0.png)
 
-REQUIREMENTS
+## Requirements
 
 This uses pyqt5.
 
 This also uses "xinput" and "synclient." You should have xinput already,
 but you might need to install "synclient" - check your repos
 
-LICENSE
+## License
 
 BSD 3-Clause - see license.txt 
 
